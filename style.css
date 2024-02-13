@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0079FF;
+    overflow: hidden;
+    font-family: "Rubik", sans-serif;
+    font: 1rem sans-serif;
+    font-weight: 400;
+    
+}
+
+.dino1, .dino2 {
+    position: absolute;
+    width: 100%;
+    right: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.dino1 {
+    top: 40%;
+    left: 130%;
+    background: url(dino.png);
+    width: calc(7700px / 11);
+    scale: .8;
+    height: 450px;
+    animation: animateLeft 2s steps(11) ;
+   
+}
+
+.dino2 {
+    top: 10%;
+    right: 130%;
+    transform: rotateY(180deg);
+    scale: 0.8;
+    background: url(dino.png);
+    width: calc(7700px / 11);
+    height: 450px; 
+}
+
+@keyframes animateLeft {
+    from {
+        background-position: -2px 0;
+        left: -2px; /* Start from the left edge of the container */
+    }
+    to {
+        background-position: -7700px 0;
+        left: calc(100vw - width); /* Move to the right edge of the container */
+    }
+}
+
+@keyframes animateRight {
+    from {
+        background-position: -2px 0;
+        right: -5px; /* Start from the left edge of the container */
+    }
+    to {
+        background-position: -7700px 0;
+        right: calc(100vw - width); /* Move to the right edge of the container */
+    }
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+    position: relative;
+    overflow: hidden;
+    top: 10%;
+
+}
+
+img {
+    scale: 0.4;
+}
+
+.slider {
+    display: flex;
+    
+}
+
+.slide {
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.buttonSlider {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    top: 90%;
+    z-index: 1;
+}
+
+
+
+/* CSS */
+button{
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+button:focus {
+  background-color: #ac104c;
+}
+
+
+h1 {
+position: relative;
+top: 10%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: crimson;
+}
+
+.link-button {
+    position: absolute;
+    top: 60%;
+}
